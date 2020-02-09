@@ -49,6 +49,7 @@ flutter:
   assets:
     - assets/images/ratatouille_2018_small.JPG
     - assets/images/tarte_aux_mirabelles_April_2019_small.JPG
+    - assets/images/Cucumber-tomato-avocado-salad-4.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

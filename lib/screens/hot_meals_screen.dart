@@ -14,9 +14,26 @@ class HotMealsScreen extends StatelessWidget {
         Image(image: AssetImage('assets/images/ratatouille_2018_small.JPG'))
       ],
     ),
+    Entry(
+      'Ratatouille',
+      <Widget>[
+        Image(image: AssetImage('assets/images/ratatouille_2018_small.JPG'))
+      ],
+    ),
+    Entry(
+      'Ratatouille',
+      <Widget>[
+        Image(image: AssetImage('assets/images/ratatouille_2018_small.JPG'))
+      ],
+    ),
+    Entry(
+      'Ratatouille',
+      <Widget>[
+        Image(image: AssetImage('assets/images/ratatouille_2018_small.JPG'))
+      ],
+    ),
   ];
-//  - assets/images/ratatouille_2018_small.JPG
-//    - assets/images/tarte_aux_mirabelles_April_2019_small.JPG
+
   @override
   Widget build(BuildContext context) {
     return new RecipesAccordion(data: data);
