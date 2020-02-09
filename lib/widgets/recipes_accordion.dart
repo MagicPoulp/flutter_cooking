@@ -1,3 +1,5 @@
+// modified component from the flutter doc
+// https://flutter.dev/docs/catalog/samples/expansion-tile-sample
 // Copyright 2017 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
@@ -20,10 +22,10 @@ class RecipesAccordion extends StatelessWidget {
 
 // One entry in the multilevel list displayed by this app.
 class Entry {
-  Entry(this.title, [this.children = const <Entry>[]]);
+  Entry(this.title, [this.children = const <Widget>[]]);
 
   final String title;
-  final List<Entry> children;
+  final List<Widget> children;
 }
 
 // Displays one Entry. If the entry has children then it's displayed
@@ -38,7 +40,7 @@ class EntryItem extends StatelessWidget {
     return ExpansionTile(
       key: PageStorageKey<Entry>(root),
       title: Text(root.title),
-      children: root.children.map(_buildTiles).toList(),
+      children: root.children,
     );
   }
 
