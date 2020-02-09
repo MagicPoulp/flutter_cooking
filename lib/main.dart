@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Cooking',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
       home: MyHomePage(title: 'Flutter Cooking'),
     );
@@ -33,6 +33,7 @@ class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
   final drawerItems = [
+    new _DrawerItem("Home", Icons.arrow_right),
     new _DrawerItem("Salads", Icons.arrow_right),
     new _DrawerItem("Pies", Icons.arrow_right),
     new _DrawerItem("Hot meals", Icons.arrow_right),
@@ -56,6 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
         return new PiesScreen();
       case 3:
         return new HotMealsScreen();
+    }
   }
 
     _onSelectItem(int index) {
@@ -65,7 +67,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     var drawerOptions = <Widget>[];
     for (var i = 0; i < widget.drawerItems.length; i++) {
       var d = widget.drawerItems[i];
@@ -80,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
     }
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter Cooking'),
+        title: Text(widget.drawerItems[_selectedDrawerIndex].title),
       ),
         drawer: Drawer(
           child: ListView(
