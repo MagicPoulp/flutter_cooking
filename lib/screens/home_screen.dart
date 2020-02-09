@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class PiesScreen extends StatelessWidget {
+class HomeScreen extends StatelessWidget {
   const PiesScreen() : super();
 
   @override
