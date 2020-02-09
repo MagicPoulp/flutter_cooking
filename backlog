@@ -1,0 +1,7 @@
+# add a navigator so that the history of previous screens is stacked
+
+# use bloc, a Rx state library
+import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+

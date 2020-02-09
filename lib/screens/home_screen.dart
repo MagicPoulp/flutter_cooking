@@ -25,9 +25,6 @@ class HomeScreen extends StatelessWidget {
           ),
       );
     }
-    return Container(
-        margin: const EdgeInsets.only(left: 20.0, right: 20.0),
-        child: ListView(children: checkboxes)
-    );
+    return ListView(children: checkboxes);
   }
 }

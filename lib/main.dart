@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:bloc/bloc.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:flutter_cooking/screens/home_screen.dart';
 import 'package:flutter_cooking/screens/salads_screen.dart';
@@ -48,21 +46,31 @@ class _MyHomePageState extends State<MyHomePage> {
   int _selectedDrawerIndex = 0;
 
   _getDrawerItemWidget(index) {
+    var content;
     switch (index) {
       case 0:
-        return new HomeScreen();
+        content = new HomeScreen();
+        break;
       case 1:
-        return new SaladsScreen();
+        content = new SaladsScreen();
+        break;
       case 2:
-        return new PiesScreen();
+        content = new PiesScreen();
+        break;
       case 3:
-        return new HotMealsScreen();
+        content = new HotMealsScreen();
+        break;
     }
+    return Container(
+        margin: const EdgeInsets.only(left: 20.0, right: 20.0),
+        child: content
+    );
   }
 
     _onSelectItem(int index) {
       setState(() => _selectedDrawerIndex = index);
-      Navigator.of(context).pop(); // close the drawer
+      // close the drawer
+      Navigator.of(context).pop();
     }
 
   @override
